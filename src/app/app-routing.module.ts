@@ -14,6 +14,7 @@ import { ProfilComponent } from './components/profil/profil.component';
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
+  {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent,children:[
     {path:"profile",component:ProfilComponent},
     {path:"listO",component:ListOffreComponent},
