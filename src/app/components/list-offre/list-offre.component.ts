@@ -34,7 +34,7 @@ export class ListOffreComponent implements OnInit {
   loadOffres(): void {
     this.offre.getOffres(this.currentPage, this.perPage)
       .subscribe((offres:any) => {
-        this.offres = offres;
+        this.offres = offres.data;
       });
   }
 
