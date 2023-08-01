@@ -1,0 +1,36 @@
+<input type="text" name="search_name"  class="form-control">
+
+<table class="table">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">description</th>
+        <th scope="col">offres</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let c of categories let index=index" >
+        <th scope="row">{{index+1}}</th>
+        <td>{{c.name}}</td>
+        <td>{{c.description}}</td>
+      
+        <div>
+        <!-- <td *ngFor="let p of c.subcategories">{{p.name}}</td>  -->
+      </div>
+
+
+        <td><button type="button" class="btn btn-danger" (click)="deleteC(c._id)">Delete</button>
+            &nbsp;<button type="button" class="btn btn-success" >details</button>
+            &nbsp;<button type="button" class="btn btn-primary">update</button>
+        </td>
+        <!-- [routerLink]="['/onecategory',c._id]" -->
+        <!-- [routerLink]="['/updatec',c._id]" -->
+        <!-- (click)="deletecategory(c._id)" -->
+    </tr>
+
+    </tbody>
+  </table>
+

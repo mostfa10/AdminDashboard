@@ -1,0 +1,26 @@
+<p>ajoutcategory works!</p>
+<div class="register-form">
+    <form [formGroup]="formB">
+      <div class="form-group">
+        <label>ville</label>
+        <input
+          type="text"
+          formControlName="place" 
+          class="form-control"> <!--formcontrolname pour affisher contenu backend -->
+      </div>
+    
+      
+      <!-- <div class="form-group">
+        <label>file</label>
+        <input
+          type="file"
+          formControlName="file"
+          class="form-control">
+      </div> -->
+    
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" (click)="createV()">ajout categoru</button>
+      
+      </div>
+    </form>
+  </div>

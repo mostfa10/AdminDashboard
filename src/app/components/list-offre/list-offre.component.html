@@ -1,0 +1,39 @@
+<input type="text" name="search_name"  class="form-control">
+
+<table class="table">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">name</th> 
+        <th scope="col">description</th>
+        <th scope="col">file</th>
+        <th scope="col">subcategories</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let c of offres  let index=index " >
+        <th scope="row">{{index+1}}</th>
+        <td>{{c.titre}}</td>
+        <td>{{c.description}}</td>
+        <td>{{c.numberP}}</td> 
+        <div>
+      </div>
+
+
+        <td><button type="button" class="btn btn-danger"(click)="deletO(c._id)" >Delete</button>
+            &nbsp;<button type="button" class="btn btn-success" >details</button>
+            &nbsp; <button class="confirm-btn" (click)="confirmOffre(c._id)">Confirmer</button>
+            &nbsp;<button type="button" class="btn btn-primary" >update</button>
+        </td>
+        <!-- (click)="deletecategory(c._id)" -->
+        <!-- [routerLink]="['/onecategory',c._id]" -->
+        <!-- [routerLink]="['/updatec',c._id]" -->
+    </tr>
+
+    </tbody>
+  </table>
+
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Page précédente</button>
+  <button (click)="nextPage()">Page suivante</button>
